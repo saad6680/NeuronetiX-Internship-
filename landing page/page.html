@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMp7MjDrVtsKYBHTE1QCVd4DREeHZRmP3Xh6kS" crossorigin="anonymous">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button id="toggle-theme"> Dark Mode</button>
+
+    <div class="container" id="about">
+        <div class="card">
+            <div class="profile-image">
+                <img src="saad.jpg" alt="profile">
+            </div>
+            <div class="profile-info">
+                <h1>Saad Ezz</h1>
+                <h5>@saadezz</h5>
+            </div>
+            <div class="profile-contact">
+                <a href="https://www.instagram.com/sa3d__ezz" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/SaadEzz" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com/saad" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/saadezz" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/saad-ezz-eldin-404138202" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saad6680" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="profile-bio">
+                <span>As a passionate Computer Science and Information Technology student at Zagazig University, I am driven by a curiosity for problem-solving and a love for creating impactful digital experiences. With hands-on experience in software development, particularly in frontend and full-stack projects, I’ve cultivated a diverse skill set in web technologies, including React.js, HTML, CSS, JavaScript, and Sass.
+
+                    During my internships, I gained practical knowledge in Git version control, C programming, and Python, and collaborated on various projects that solidified my understanding of software engineering principles. I have experience working with Linux environments and handling frontend development tasks that improve user experiences and interfaces.
+                    
+                    I am continuously expanding my knowledge in emerging technologies like AI, Machine Learning, IoT, and Cybersecurity, and I’m always looking for opportunities to further hone my skills in web and software development.
+                    
+                    Let’s connect and explore how I can contribute to impactful tech projects!.</span>
+            </p>
+            <div class="profile-button">
+                <button>Follow</button>
+                <button>Message</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Here are the services I offer to help your business grow online:</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>I build modern, responsive, and SEO-friendly websites to ensure your business stands out online.</p>
+            </div>
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>I create user-centered designs that provide an intuitive and enjoyable experience for your users.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web Maintenance</h3>
+                <p>Keep your website up-to-date, secure, and running smoothly with ongoing maintenance and support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <p>For more information about my projects, please visit my <a href="https://github.com/saad6680" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, please email me at <i class="fas fa-envelope"></i> <span class="email">saadezz645@gmail.com</span></p>
+        <div class="contact-details">
+            <div class="row">
+                <i class="fas fa-phone"></i>
+                <div class="info">
+                    <div class="head">Phone</div>
+                    <div class="sub-title">+201552984153</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="social-icons">
+                    <a class="social-icon" href="https://www.linkedin.com/in/saad-ezz-eldin-404138202" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a> 
+                </div>
+            </div>
+        </div>
+
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Saad Ezz. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Smooth scrolling for menu links
+        document.querySelectorAll('a.menu-btn').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark mode toggle
+        const toggleButton = document.getElementById('toggle-theme');
+        toggleButton.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+            
+            if (name === '' || email === '' || message === '') {
+                alert('All fields are required.');
+                event.preventDefault();
+            } else {
+                alert('Thank you for your message!');
+            }
+        });
+
+        // Button animation on click
+        const buttons = document.querySelectorAll('.profile-button button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                button.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Follow button toggle
+        const followButton = document.querySelector('.profile-button button:first-of-type');
+        followButton.addEventListener('click', function() {
+            if (followButton.innerText === 'Follow') {
+                followButton.innerText = 'Following';
+            } else {
+                followButton.innerText = 'Follow';
+            }
+        });
+    </script>
+</body>
+</html>

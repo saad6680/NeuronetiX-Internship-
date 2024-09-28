@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Sports Blog</h1>
+        <button onclick="toggleSection('latest-news')">Toggle Latest News</button>
+        <section id="latest-news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>Football Championship</h3>
+                <img src="images/football.jpg" alt="Football Championship">
+                <p>The latest football championship was a thrilling event with many surprises.</p>
+            </article>
+            <article>
+                <h3>Basketball Finals</h3>
+                <img src="images/basketball.jpg" alt="Basketball Finals">
+                <p>The basketball finals were intense, with the underdogs taking the trophy.</p>
+            </article>
+        </section>
+        <button onclick="toggleSection('upcoming-events')">Toggle Upcoming Events</button>
+        <section id="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <article>
+                <h3>Marathon 2024</h3>
+                <img src="images/marathon.jpg" alt="Marathon 2024">
+                <p>Join us for the annual marathon event in 2024. Register now!</p>
+            </article>
+            <article>
+                <h3>Swimming Championship</h3>
+                <img src="images/swimming.jpg" alt="Swimming Championship">
+                <p>The swimming championship is set to take place next month. Don't miss it!</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Sports Blog</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

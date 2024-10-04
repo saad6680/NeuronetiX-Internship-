@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Quiz App</h1>
+            <div class="difficulty">
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </header>
+
+        <div id="quiz">
+            <!-- Quiz questions will be injected here -->
+        </div>
+
+        <div id="result">
+            <h2>Your Score: <span id="score"></span></h2>
+            <button id="retry">Retry Quiz</button>
+        </div>
+
+        <div id="high-scores">
+            <h2>High Scores</h2>
+            <ul id="high-score-list"></ul>
+        </div>
+
+        <button id="start-quiz">Start Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
